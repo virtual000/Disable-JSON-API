@@ -7,7 +7,7 @@ The JSON API can be disabled using the rest_authentication_errors filter, which 
 
 Here's an example of how you can implement this:
 
-  function disable_json_api_for_frontend($result) {
+ function disable_json_api_for_frontend($result) {
     // Check if the request is coming from the Elementor editor
     if (defined('ELEMENTOR_VERSION') && (current_user_can('edit_pages') || current_user_can('edit_posts'))) {
         return $result;
